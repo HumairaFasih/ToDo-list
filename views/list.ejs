@@ -1,0 +1,24 @@
+<%- include("header.html") -%>
+<body>
+    <div class="date-container">
+        <h1><%= Title %></h1>
+    </div>
+    <div class="list-box">
+  
+        <% for (var i=0; i < itemArray.length; i++) { %>
+            <div class="item">
+                <input type="checkbox">
+                <p><%- itemArray[i] %></p>
+            </div>
+        <% } %>
+   
+    </div>
+    <form action="<%= route %>" method="post">
+        <input type="text" name="new_task" placeholder="Enter new task" required autofocus>
+        <button type="submit">
+            +
+            <i class="fa-regular fa-check"></i>
+        </button>
+    </form>
+</body>
+</html>
